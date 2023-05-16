@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passion</title>
+    <style>
+        body {
+            background-image: url('./static/img/backgrounds/background_resize.jpg');
+            background-size:cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99999;
+        }
+        .header a{
+			text-decoration:none;color:rgb(230, 230,230);
+		}
+        .header a:hover{text-decoration:none;color: rgb(230, 230,230);}
+        .header-item{left: 5%;top:10%; position: relative;}
+        .header-item li{
+            height: 70%;
+            margin-right: 80px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 150%;
+        }
+        .header-underline{
+			position:relative;
+		}
+		.header-underline::after{
+			content:'';
+			display:block;
+			width:100%;
+			height:2px;
+			position:inherit;
+			bottom:-10px;
+			background:white;
+			transition:all 0.3s ease-in-out;
+			transform: scale3d(0,1,1);
+			transform-origin:50% 0;
+		}
+		.header-underline:hover::after{
+			transform:scale3d(1,1,1);
+		}
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin-left: 20px;
+            padding: 20px;
+            position: relative;
+            margin-top: 100px;
+
+        }
+        .left-column {
+            margin-right: 20px;
+            width: 20%;
+        }
+        .left-column img {
+            width: 100%;
+        }
+        .right-column {
+            left: 35%;
+            width: 65%;
+        }
+        .paragraph {
+            background-color: antiquewhite;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .other-resources {
+            background-color: #8bc34a;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .hidden-answer {
+            flex: 1;
+            background-color: #f2f2f2;
+            border-left: 1px solid #ccc;
+            padding: 20px;
+            display: none;
+        }
+        .hidden-answer.active {
+            display: block;
+        }
+        .other-resources-button {
+            background-color: #8bc34a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 10px;
+            margin-left: 34%;
+        }
+        .other-resources-button a {
+            color: white;
+            text-decoration: none;
+        }
+        .other-resources-button:hover {
+            background-color: #7cb342;
+        }
+        .other-resources-item {
+            list-style-type: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .other-resources-item a {
+            color: white;
+            text-decoration: none;
+        }
+        .other-resources-item a:hover {
+            color: #cecece;
+        }
+        p {
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-item" >
+            <li><a class="header-underline" href="index.html">Eco-Reflection</a></li>
+            <li><a class="header-underline" href="avoidance.html">Avoidance</a></li>
+            <li><a class="header-underline" href="confusion.html">Confusion</a></li>
+            <li><a class="header-underline" href="anxiety.html">Anxiety</a></li>
+            <li><a class="header-underline" href="passion.html">Passion</a></li>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-column">
+          <div class="image-container">
+            <img src="./static/img/motivated-on-leaf.png" alt="Image">
+          </div>
+        </div>
+        <div class="right-column">
+            <h3>Click to help them find solutions</h3>
+            <div class="paragraph">
+                <p>"I think that everyone can make a difference in preventing ecological collapse."</p>
+                <div class="hidden-answer">
+                    <div class="options-container">
+                        <ul class="options">
+                            <li><input type="checkbox" id="option2"><label for="option2">"While it's noble to believe that everyone can make a difference, the reality is that individual actions may not have a significant impact on preventing ecological collapse."</label></li>
+                            <li><input type="checkbox" id="option1" data-right="true"><label for="option1">"I completely agree with you! Each individual has the power to make a positive impact on preventing ecological collapse. By adopting sustainable practices, supporting environmentally friendly initiatives, and spreading awareness, we can collectively contribute to a more sustainable future. Remember, even small actions, when multiplied by many, can lead to significant change. Let's inspire others and work together to create a healthier planet for future generations."</label></li>
+                        </ul>
+                        <button class="other-resources-button"><a href="#other-resources-id">See available EPFL-UNIL resources</a></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="paragraph">
+                <p>"Until now, I worked hard to increase awareness amongst people about ecological effects and problems, but I feel tired and I'm starting to think that what I've done so far hasn't changed anything."</p>
+                <div class="hidden-answer">
+                    <div class="options-container">
+                      <ul class="options">
+                          <li><input type="checkbox" id="option1"><label for="option1">"It's natural to feel tired and question the effectiveness of your awareness-raising efforts. Perhaps it's time to shift your focus towards other endeavors where you can see more immediate results."</label></li>
+                          <li><input type="checkbox" id="option2" data-right="true"><label for="option2">"Your hard work in educating others about ecological effects and problems is valuable and lays the foundation for future action. Change takes time, and the impact of awareness-building efforts may not be immediately visible. Stay determined and continue your work, knowing that each person you reach has the potential to become an agent of change."</label></li>
+                      </ul>
+                      <button class="other-resources-button"><a href="#other-resources-id">See available EPFL-UNIL resources</a></button>
+                  </div>
+              </div>
+            </div>
+  
+            <div class="paragraph">
+                <p>"When I look at the other people around me, I feel disappointed and even angry because they seem like they are not paying sufficient attention to this crucial phenomenon."</p>
+                <div class="hidden-answer">
+                    <div class="options-container">
+                        <ul class="options">
+                            <li><input type="checkbox" id="option1" data-right="true"><label for="option1">"It's understandable that you feel disappointed and angry when others around you don't seem to prioritize environmental issues. However, focusing on their actions may only lead to frustration and negativity. Instead, try to accept that people have different priorities and perspectives. Instead of resorting to aggressive activism and confrontational debates, consider engaging in peaceful advocacy and open dialogue. Focus on educating and raising awareness about the importance of the environment. By fostering understanding and empathy, we may be able to inspire positive change and encourage others to pay more attention to environmental issues."</label></li>
+                            <li><input type="checkbox" id="option2" data-right="true"><label for="option2">"It's understandable that you feel disappointed and angry when others around you don't seem to pay sufficient attention to the crucial issue of the environment. However, it's important to focus on positive actions and find supportive communities that share your passion for sustainability. Don't forget to take care of yourself in the process. You can consider engaging in physical activities at the EPFL-UNIL Sports center to promote personal well-being and connect with others who may also have an interest in environmental causes. Additionally, you can explore groups and events like Espace-Transitions and Trust and Support Network (TSN) to meet like-minded individuals and find support. Engaging in guided meditation can also help you find inner peace and balance amidst these frustrations. Remember, by channeling your energy towards positive actions and surrounding yourself with supportive communities, you can make a difference and inspire others to join your cause."</label></li>
+                        </ul>
+                        <button class="other-resources-button"><a href="#other-resources-id">See available EPFL-UNIL resources</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blank" style="height: 100px;"></div>
+            <div class="other-resources" id="other-resources-id">
+                <h4 style="text-align: center; color: white;">Available resources in EPFL-UNIL:</h4>
+                <HR width="85%" color=white SIZE=1>
+                <ul>
+                    <li class="other-resources-item"><a href="https://www.epfl.ch/education/educational-initiatives/discovery-learning-program-2/interdisciplinary-projects/">Make</a></li>
+                    <li class="other-resources-item"><a href="https://www.epfl.ch/about/sustainability/sustainability-in-education/durabilis-award/">Durabilis</a></li>
+                    <li class="other-resources-item"><a href="https://www.epfl.ch/labs/skil/en/skil-for-your-project/propose-a-project/">Skil</a></li>
+                    <li class="other-resources-item"><a href="https://ucreate.ch/">Ucreate</a></li>
+                    <li class="other-resources-item"><a href="https://www.epfl.ch/innovation/students-innovation-lab/epfl-changemakers/">EPFL Changemakers</a></li>
+                    <li class="other-resources-item"><a href="https://sport.unil.ch/">Sports center EPFL-UNIL</a></li>
+                    <li class="other-resources-item"><a href="https://www.unil.ch/espace-transitions/fr/home.html">Espace-Transitions</a></li>
+                    <li class="other-resources-item"><a href="https://www.epfl.ch/campus/community/trust-and-support-network/">Trust and Support Network (TSN)</a></li>
+                    <li class="other-resources-item"><a href="https://www.epfl.ch/campus/spiritual-care/activites/meditation/">Guided meditation</a></li>
+                    <li class="other-resources-item"><a href="https://www.google.com/maps/place/For%C3%AAt+de+Dorigny/@46.5233077,6.578139,15z/data=!4m2!3m1!1s0x0:0x72d0e6ee0ae1dd4c?sa=X&ved=2ahUKEwiqx5nplcL-AhVPhf0HHTw7AHwQ_BJ6BAhVEAg">Forêt de Dorigny</a></li>                
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const middleColumn = document.querySelector(".right-column");
+    const rightColumns = document.querySelectorAll(".hidden-answer");
+
+    // Get all the checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', checkAnswers);
+    });
+
+    function checkAnswers() {
+        checkboxes.forEach((checkbox) => {
+            const parentParagraph = checkbox.parentElement;
+            const isCorrect = checkbox.getAttribute('data-right') === 'true';
+
+            if (checkbox.checked) {
+                parentParagraph.style.backgroundColor = isCorrect ? '#8bc34a' : '#f44336';
+            } else {
+                parentParagraph.style.backgroundColor = '';
+            }
+        });
+    }
+
+    let selectedParagraph;
+
+    middleColumn.addEventListener("click", (event) => {
+        const clickedParagraph = event.target.closest("p");
+        if (!clickedParagraph) return;
+
+        // Select the clicked paragraph only if it's not already selected
+        if (clickedParagraph !== selectedParagraph) {
+            // Deselect the previously selected paragraph, if any
+            if (selectedParagraph) {
+                const previousRightColumn = selectedParagraph.nextElementSibling;
+                previousRightColumn.style.display = "none";
+            }
+
+            // Select the clicked paragraph
+            selectedParagraph = clickedParagraph;
+
+            // Show the right column for the selected paragraph
+            const rightColumn = clickedParagraph.nextElementSibling;
+            rightColumn.style.display = "block";
+        }
+    });
+</script>
+
+</html>
+  

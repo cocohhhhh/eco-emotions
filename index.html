@@ -1,1 +1,108 @@
-<h1> Hello world! <h>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eco-Reflection</title>
+	<style>
+		body {
+			background-image: url('./static/img/backgrounds/background_resize.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			margin: 0;
+			padding: 0;
+		}
+		.banner {
+			background-color: #4CAF50;
+			padding: 20px;
+			text-align: center;
+		}
+		.banner h1 {
+			color: white;
+			font-weight: bold;
+			margin: 0;
+		}
+		.cycle {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0px;
+		}
+		.cycle-node {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			background-color: none;
+			margin-right: 100px;
+			margin-left: 100px;
+			margin-bottom: 0px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform 0.2s ease-in-out;
+		}
+		.cycle-node:hover {
+			transform: rotate(-10deg);
+		}
+		.cycle-node img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+		.sticker {
+			position: absolute;
+			background-color: rgba(255, 255, 204, 0.9);
+			padding: 10px;
+			border-radius: 10px;
+			font-weight: bold;
+		}
+		.left-sticker {
+			left: -180px;
+			top: 60px;
+			text-align: center;
+		}
+		.right-sticker {
+			right: -180px;
+			top: 60px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<h1>Eco-Reflection</h1>
+	</div>
+	<div class="cycle">
+		<div class="col-1">
+			<div class="cycle-node">
+				<a href="avoidance.html"><img src="./static/img/indifferent-on-leaf.png" alt="Node 1"></a>
+				<div class="sticker left-sticker">
+					<p>I don't care.</p>
+				</div>
+			</div>
+			<div class="cycle-node">
+				<a href="passion.html"><img src="./static/img/motivated-on-leaf.png" alt="Node 2"></a>
+				<div class="sticker left-sticker">
+					<p>Ready to do something!</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-2">
+			<div class="cycle-node">
+				<a href="confusion.html"><img src="./static/img/confused-on-leaf.png" alt="Node 3"></a>
+				<div class="sticker right-sticker">
+					<p>Don't know what to do...</p>
+				</div>
+			</div>
+			<div class="cycle-node">
+				<a href="anxiety.html"><img src="./static/img/angry-on-leaf.png" alt="Node 4"></a>
+				<div class="sticker right-sticker">
+					<p>Struggling with emotions</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
